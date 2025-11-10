@@ -1,7 +1,5 @@
 # Overwatch Cheat Analysis
 
-By Fakih Hamid
-
 Project that demonstrates how statistical analysis, behavioral modeling, and machine learning can highlight cheating patterns in Blizzard's Overwatch ecosystem using synthetic data.
 
 ## Project Goals
