@@ -81,8 +81,6 @@ The generation script creates player-match level telemetry for 1,000+ matches in
 - **Auditability**: Every detection routine outputs player IDs with supporting metrics so human reviewers can justify bans or escalate for further investigation.
 
 
-Finally:
-
 `Overwatch_Cheat_Analysis.ipynb` demonstrates:
 
 - Data ingestion and preprocessing
