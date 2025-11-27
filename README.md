@@ -1,14 +1,13 @@
 # Overwatch Cheat Analysis
 
-Project that demonstrates how statistical analysis, behavioral modeling, and machine learning can highlight cheating patterns in Blizzard's Overwatch ecosystem using synthetic data.
+Personal project exploring how statistical analysis, behavioral modeling, and lightweight machine learning techniques can reveal cheating patterns within the Overwatch ecosystem, using fully synthetic data for experimentation.
 
 ## Project Goals
 
 - Model common cheating behaviours (aimbot, wallhack, triggerbot, smurfing) with realistic match telemetry.
 - Provide reusable detection utilities that surface impossible performance, behavioural anomalies, and model-driven risk scores.
 - Visualise risk signals for analysts and prototype a Streamlit dashboard suitable for live operations teams.
-- Share a clear methodology for integrating these capabilities into Blizzard anti-cheat workflows while managing false positives.
-
+  
 ## Repository Layout
 
 ```
@@ -72,9 +71,9 @@ The generation script creates player-match level telemetry for 1,000+ matches in
    - Scatter plots (headshot rate vs. reaction time), density distributions, cluster maps, and ROC curves.  
    - Streamlit dashboard (`visualization/create_dashboards.py`) for ops teams to filter heroes, review suspects, and inspect model outputs in real time.
 
-## Blizzard Integration Considerations
+## Integration Considerations
 
-- **Telemetry Sources**: Map synthetic features to real Overwatch telemetry (e.g., `position_changes` from movement logs, `ultimate_efficiency` from ability usage stats).  
+- **Telemetry Sources**: Map synthetic features to real telemetry (e.g., `position_changes` from movement logs, `ultimate_efficiency` from ability usage stats).  
 - **Pipeline Fit**: Models can run as scheduled batch jobs analysing prior sessions, or as near-real-time microservices evaluating live match data and returning risk scores.  
 - **False Positive Management**: Combine statistical thresholds with report weightings, enforce cooldown windows before enforcement, and require multiple signals (Isolation Forest + reports + heuristic trigger) before action.  
 - **Scalability**: All routines operate on aggregated player statistics. In production, adapt to distributed stores (BigQuery, Snowflake) and push model inference into scalable endpoints using the trained artefacts saved here.  
@@ -88,7 +87,7 @@ The generation script creates player-match level telemetry for 1,000+ matches in
 - Behavioural clustering and centroid interpretation
 - Isolation Forest training, evaluation, and ROC charts
 - Cheat probability scoring with explanations for top suspects
-- Recommendations for integrating with Overwatch's existing Warden and Battle.net enforcement systems
+
 
 ## Limitations & Future Work
 
